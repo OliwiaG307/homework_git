@@ -1,31 +1,27 @@
-﻿Console.WriteLine("Podaj liczbę:");
+﻿Console.WriteLine("Podaj dowolny znak, literę lub liczbę:");
 string userInput = Console.ReadLine();
-int number = int.Parse(userInput);
+string lowerCaseInputValue = userInput.ToLower();
 
-switch (number)
+string vowels = "aąeęiouóy";
+string consonant = "bcćdfghjklłmnńprsśtwyzźż";
+string sign = "@#$%&*()_-=+{}[]|:;'<>,.!?/~`^";
+
+if (vowels.Contains(lowerCaseInputValue))
 {
-    case 1:
-        Console.WriteLine("poniedziałek");
-        break;
-    case 2:
-        Console.WriteLine("wtorek");
-        break;
-    case 3:
-        Console.WriteLine("środa");
-        break;
-    case 4:
-        Console.WriteLine("czwartek");
-        break;
-    case 5:
-        Console.WriteLine("piątek");
-        break;
-    case 6:
-        Console.WriteLine("sobota");
-        break;
-    case 7:
-        Console.WriteLine("niedziela");
-        break;
-    default:
-        Console.WriteLine("nie ma takiego dnia tygodnia");
-        break;
+    Console.WriteLine($"{lowerCaseInputValue} jest samogłoską");
 }
+else if (consonant.Contains(lowerCaseInputValue))
+{
+    Console.WriteLine($"{lowerCaseInputValue} jest spółgłoską");
+}
+else if (sign.Contains(lowerCaseInputValue))
+{
+    Console.WriteLine($"{lowerCaseInputValue} jest znakiem");
+}
+else
+{
+    Console.WriteLine($"{lowerCaseInputValue} jest cyfrą");
+}
+
+
+//Sprawdź, czy wpisany znak to samogłoska, spółgłoska, cyfra czy inny znak. 
