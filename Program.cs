@@ -1,29 +1,31 @@
-﻿Console.WriteLine("Podaj masę ciała:");
-string weight = Console.ReadLine();
-double numberOne = double.Parse(weight);
+﻿Console.WriteLine("Podaj liczbę:");
+string userInput = Console.ReadLine();
+int number = int.Parse(userInput);
 
-Console.WriteLine("Podaj wzrost:");
-string height = Console.ReadLine();
-double numberTwo = double.Parse(height);
-
-double theBMI = numberOne / (numberTwo * numberTwo) * 10000;
-Console.WriteLine($"Twoje BMI to: {theBMI}");
-
-if (theBMI < 18.5)
+switch (number)
 {
-    Console.WriteLine("niedowaga");
+    case 1:
+        Console.WriteLine("poniedziałek");
+        break;
+    case 2:
+        Console.WriteLine("wtorek");
+        break;
+    case 3:
+        Console.WriteLine("środa");
+        break;
+    case 4:
+        Console.WriteLine("czwartek");
+        break;
+    case 5:
+        Console.WriteLine("piątek");
+        break;
+    case 6:
+        Console.WriteLine("sobota");
+        break;
+    case 7:
+        Console.WriteLine("niedziela");
+        break;
+    default:
+        Console.WriteLine("nie ma takiego dnia tygodnia");
+        break;
 }
-else if (theBMI >= 18.5 && theBMI < 25)
-{
-    Console.WriteLine("prawidłowa waga");
-}
-else if (theBMI >= 25 && theBMI < 30)
-{
-    Console.WriteLine("nadwaga");
-}
-else if (theBMI >= 30)
-{
-    Console.WriteLine("otyłość");
-}
-
-//Program to mierzenia BMI
