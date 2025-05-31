@@ -1,14 +1,16 @@
-﻿Console.WriteLine("Napisz zdanie:");
+﻿Console.WriteLine("Podaj liczbe: ");
+
 string userInput = Console.ReadLine();
 
-if (userInput.Length >= 4)
+int number = int.Parse(userInput);
+
+bool isDivisibledFirst = number % 3 == 0;
+
+bool isDivisibledSecond = number % 7 == 0;
+
+if (isDivisibledFirst && isDivisibledSecond)
 {
-    Console.WriteLine(userInput.Substring(userInput.Length - 4) + userInput.Substring(userInput.Length - 4) + userInput.Substring(userInput.Length - 4) + userInput.Substring(userInput.Length - 4));
-}
-else
-{
-    Console.WriteLine(userInput.Length < 4 ? userInput + userInput + userInput);
+    Console.WriteLine($"Liczba {number} jest podzielna przez 3 i 7");
 }
 
-//Write a C# program to create a string of four copies, taking the last four characters from a given string.
-//If the given string is less than 4, return the original one.
+//Sprawdzić czy podana liczba jest podzielna przez 3 i 7.
