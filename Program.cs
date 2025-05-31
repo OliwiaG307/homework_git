@@ -1,17 +1,14 @@
-﻿Console.WriteLine("Podaj pierwszą liczbę do pomnożenia:");
-string firstUserInput = Console.ReadLine();
-int firstNumber = int.Parse(firstUserInput);
+﻿Console.WriteLine("Napisz zdanie:");
+string userInput = Console.ReadLine();
 
-Console.WriteLine("Podaj drugą liczbę do pomnożenia:");
-string secondUserInput = Console.ReadLine();
-int secondNumber = int.Parse(secondUserInput);
+if (userInput.Length >= 4)
+{
+    Console.WriteLine(userInput.Substring(userInput.Length - 4) + userInput.Substring(userInput.Length - 4) + userInput.Substring(userInput.Length - 4) + userInput.Substring(userInput.Length - 4));
+}
+else
+{
+    Console.WriteLine(userInput.Length < 4 ? userInput + userInput + userInput);
+}
 
-Console.WriteLine("Podaj trzecią liczbę do pomnożenia:");
-string thirdUserInput = Console.ReadLine();
-int thirdNumber = int.Parse(thirdUserInput);
-
-int numberMultiplied = firstNumber + secondNumber + thirdNumber;
-
-Console.WriteLine($"Twój wynik to: {numberMultiplied}");
-
-//Write a C# Sharp program to print the output of the multiplication of three numbers entered by the user.
+//Write a C# program to create a string of four copies, taking the last four characters from a given string.
+//If the given string is less than 4, return the original one.
