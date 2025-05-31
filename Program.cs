@@ -1,17 +1,10 @@
-﻿Console.WriteLine("Podaj pierwszą liczbę do pomnożenia:");
-string firstUserInput = Console.ReadLine();
-int firstNumber = int.Parse(firstUserInput);
+﻿Console.WriteLine("Napisz słowo lub zdanie:");
+string userInput = Console.ReadLine();
 
-Console.WriteLine("Podaj drugą liczbę do pomnożenia:");
-string secondUserInput = Console.ReadLine();
-int secondNumber = int.Parse(secondUserInput);
+if (userInput.Length >= 1)
+{
+    string letter = userInput.Substring(0, 1);
+    Console.WriteLine(letter + userInput + letter);
+}
 
-Console.WriteLine("Podaj trzecią liczbę do pomnożenia:");
-string thirdUserInput = Console.ReadLine();
-int thirdNumber = int.Parse(thirdUserInput);
-
-int numberMultiplied = firstNumber + secondNumber + thirdNumber;
-
-Console.WriteLine($"Twój wynik to: {numberMultiplied}");
-
-//Write a C# Sharp program to print the output of the multiplication of three numbers entered by the user.
+//Write a C# program to create a string from a given string (length 1 or more) with the first character added at the front and back.
