@@ -1,10 +1,14 @@
-﻿Console.WriteLine("Napisz słowo lub zdanie:");
+﻿Console.WriteLine("Napisz zdanie:");
 string userInput = Console.ReadLine();
 
-if (userInput.Length >= 1)
+if (userInput.Length >= 4)
 {
-    string letter = userInput.Substring(0, 1);
-    Console.WriteLine(letter + userInput + letter);
+    Console.WriteLine(userInput.Substring(userInput.Length - 4) + userInput.Substring(userInput.Length - 4) + userInput.Substring(userInput.Length - 4) + userInput.Substring(userInput.Length - 4));
+}
+else
+{
+    Console.WriteLine(userInput.Length < 4 ? userInput + userInput + userInput);
 }
 
-//Write a C# program to create a string from a given string (length 1 or more) with the first character added at the front and back.
+//Write a C# program to create a string of four copies, taking the last four characters from a given string.
+//If the given string is less than 4, return the original one.
