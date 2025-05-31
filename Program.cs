@@ -1,16 +1,14 @@
-﻿Console.WriteLine("Podaj liczbe: ");
+﻿Console.WriteLine("Podaj samogłoskę");
 
 string userInput = Console.ReadLine();
+string lowerCaseInputValue = userInput.ToLower();
+string vowels = "aąeęiouóy";
 
-int number = int.Parse(userInput);
+bool isVowel = vowels.Contains(lowerCaseInputValue);
 
-bool isDivisibledFirst = number % 3 == 0;
-
-bool isDivisibledSecond = number % 7 == 0;
-
-if (isDivisibledFirst && isDivisibledSecond)
+if (isVowel)
 {
-    Console.WriteLine($"Liczba {number} jest podzielna przez 3 i 7");
+    Console.WriteLine($"Podana litera {lowerCaseInputValue} jest samogłoską");
 }
 
-//Sprawdzić czy podana liczba jest podzielna przez 3 i 7.
+//Sprawdzić czy podana litera jest samogłoską
