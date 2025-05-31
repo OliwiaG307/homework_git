@@ -1,16 +1,29 @@
-﻿Console.WriteLine("Podaj liczbe: ");
+﻿Console.WriteLine("Podaj masę ciała:");
+string weight = Console.ReadLine();
+double numberOne = double.Parse(weight);
 
-string userInput = Console.ReadLine();
+Console.WriteLine("Podaj wzrost:");
+string height = Console.ReadLine();
+double numberTwo = double.Parse(height);
 
-int number = int.Parse(userInput);
+double theBMI = numberOne / (numberTwo * numberTwo) * 10000;
+Console.WriteLine($"Twoje BMI to: {theBMI}");
 
-bool isDivisibledFirst = number % 3 == 0;
-
-bool isDivisibledSecond = number % 7 == 0;
-
-if (isDivisibledFirst && isDivisibledSecond)
+if (theBMI < 18.5)
 {
-    Console.WriteLine($"Liczba {number} jest podzielna przez 3 i 7");
+    Console.WriteLine("niedowaga");
+}
+else if (theBMI >= 18.5 && theBMI < 25)
+{
+    Console.WriteLine("prawidłowa waga");
+}
+else if (theBMI >= 25 && theBMI < 30)
+{
+    Console.WriteLine("nadwaga");
+}
+else if (theBMI >= 30)
+{
+    Console.WriteLine("otyłość");
 }
 
-//Sprawdzić czy podana liczba jest podzielna przez 3 i 7.
+//Program to mierzenia BMI
