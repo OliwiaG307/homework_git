@@ -1,14 +1,29 @@
-﻿Console.WriteLine("Podaj samogłoskę");
+﻿Console.WriteLine("Podaj masę ciała:");
+string weight = Console.ReadLine();
+double numberOne = double.Parse(weight);
 
-string userInput = Console.ReadLine();
-string lowerCaseInputValue = userInput.ToLower();
-string vowels = "aąeęiouóy";
+Console.WriteLine("Podaj wzrost:");
+string height = Console.ReadLine();
+double numberTwo = double.Parse(height);
 
-bool isVowel = vowels.Contains(lowerCaseInputValue);
+double theBMI = numberOne / (numberTwo * numberTwo) * 10000;
+Console.WriteLine($"Twoje BMI to: {theBMI}");
 
-if (isVowel)
+if (theBMI < 18.5)
 {
-    Console.WriteLine($"Podana litera {lowerCaseInputValue} jest samogłoską");
+    Console.WriteLine("niedowaga");
+}
+else if (theBMI >= 18.5 && theBMI < 25)
+{
+    Console.WriteLine("prawidłowa waga");
+}
+else if (theBMI >= 25 && theBMI < 30)
+{
+    Console.WriteLine("nadwaga");
+}
+else if (theBMI >= 30)
+{
+    Console.WriteLine("otyłość");
 }
 
-//Sprawdzić czy podana litera jest samogłoską
+//Program to mierzenia BMI
