@@ -1,0 +1,5 @@
+C:\Users\oliwi\source\repos\homework_git_31.05\homework_git_31.05\obj\Debug\net8.0\homework_git_31.05.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oliwi\source\repos\homework_git_31.05\homework_git_31.05\obj\Debug\net8.0\homework_git_31.05.AssemblyInfoInputs.cache
+C:\Users\oliwi\source\repos\homework_git_31.05\homework_git_31.05\obj\Debug\net8.0\homework_git_31.05.AssemblyInfo.cs
+C:\Users\oliwi\source\repos\homework_git_31.05\homework_git_31.05\obj\Debug\net8.0\homework_git_31.05.csproj.CoreCompileInputs.cache
+C:\Users\oliwi\source\repos\homework_git_31.05\homework_git_31.05\obj\Debug\net8.0\homework_git_31.05.sourcelink.json
